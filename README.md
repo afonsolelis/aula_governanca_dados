@@ -1,35 +1,46 @@
 
-## Background & Objectives
+## Antecedentes e Objetivos
 
-The goal of this challenge is to become familiar with database design, a crucial skill to explore a database.
+O objetivo deste desafio é familiarizar-se com o design de banco de dados, uma habilidade crucial para a governança de dados em empresas.
 
 ## Specs
 
 ### Movie database design
 
-There are many ways to build a movie database, but let's start by building a basic system with `users`, `movies` and `views`.
+Imagine que a Netflix precisa identificar como gerenciar suas regras de dados.
+Existem muitas maneiras de construir um banco de dados de filmes, mas vamos começar construindo um sistema básico com `users`, `movies` e `views`.
 
-Here are the requirements of our system:
+Aqui estão os requisitos do nosso sistema:
 
-- A `user` has a `first_name`, `last_name`, an `age` and an `email`.
-- A `movie` has a `title`, a `release_year` and a `rating`.
-- A `user` can `view` many `movies`.
-- A `movie` can be `viewed` by many `users`.
-- A `view` is defined by a `date`.
+- Um `user` tem um `first_name`, `last_name`, uma `age` e um `email`.
+- Um `movie` tem um `title`, um `release_year` e uma `rating`.
+- Um `usuário` pode `ver` muitos `filmes`.
+- Um `filme` pode ser `visto` por muitos `usuários`.
+- Uma `visão` é definida por uma `data`.
 
-Which columns are primary keys? Which are foreign keys? What is the relationship between tables? How do we call the `views` table?
+Quais colunas são chaves primárias? Quais são as chaves estrangeiras? Qual é a relação entre as tabelas? Como chamamos a tabela `views`?
 
-### Design the schema
+### Desenhe o esquema
 
-Design the database schema for a movie database that meets these requirements.
-For this, you must use the [SQL Designer](http://db.lewagon.com).
+Projete o esquema de banco de dados para um banco de dados de filmes que atenda a esses requisitos.
+Para isso, você deve utilizar o [wwwsqldesigner](https://github.com/ondras/wwwsqldesigner).
 
-To check your solution, click on "Save / Load", then "Save XML", create a file locally named `movies.xml` locally and then copy/paste the generated XML code into it . You can then `make` to check your solution.
+Se precisar faça um clone do repositório: `git clone git@github.com:ondras/wwwsqldesigner.git`, mas nesta pasta você já encontra o programa, basta fazer `cd wwwsqldesigner` e rode o comando docker:
 
-If you see a weird error, double check the syntax of your named columns and tables.
+```bash
+docker build -t wwwsqldesigner .
+docker run -d -p 8080:8080 wwwsqldesigner
+```
 
-## Key learning points
+e abra o programa no [http://127.0.0.1:8080]( http://127.0.0.1:8080)
 
-- Become comfortable with using the [SQL Designer](http://db.lewagon.com) tool to build a multi-table database schema.
-- Understand the difference between primary key and foreign key.
-- Understand the difference between [`1:N` and `N:N` relationships](https://en.wikipedia.org/wiki/Cardinality_(data_modeling))
+Para verificar sua solução, clique em "Save / Load", depois em "Save XML", crie um arquivo localmente chamado `movies.xml` localmente e copie/cole o código XML gerado nele. Você pode então rodar `make` para verificar sua solução.
+
+Se você vir um erro estranho, verifique a sintaxe de suas colunas e tabelas nomeadas.
+
+## Pontos-chave de aprendizagem
+
+- Familiarize-se com o uso da ferramenta [wwwsqldesigner](https://github.com/ondras/wwwsqldesigner) para criar um esquema de banco de dados com várias tabelas.
+- Entenda a diferença entre chave primária e chave estrangeira.
+- Entenda a diferença entre [relacionamentos `1:N` e `N:N`](https://en.wikipedia.org/wiki/Cardinality_(data_modeling))
+- Entenda as regras de negócio de empresas e como pensar na forma de guardar dados através de um banco de dados relacional.
