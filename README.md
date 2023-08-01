@@ -7,7 +7,7 @@ O objetivo deste desafio é familiarizar-se com o design de banco de dados, uma 
 
 ### Movie database design
 
-Imagine que a Netflix precisa identificar como gerenciar suas regras de dados.
+Imagine que o IMDB precisa identificar como gerenciar suas regras de dados.
 Existem muitas maneiras de construir um banco de dados de filmes, mas vamos começar construindo um sistema básico com `users`, `movies` e `views`.
 
 Aqui estão os requisitos do nosso sistema:
