@@ -25,7 +25,12 @@ Quais colunas são chaves primárias? Quais são as chaves estrangeiras? Qual é
 Projete o esquema de banco de dados para um banco de dados de filmes que atenda a esses requisitos.
 Para isso, você deve utilizar o [wwwsqldesigner](https://github.com/ondras/wwwsqldesigner).
 
-Se precisar faça um clone do repositório: `git clone git@github.com:ondras/wwwsqldesigner.git`, mas nesta pasta você já encontra o programa, basta fazer `cd wwwsqldesigner` e rode o comando docker:
+Faça um clone do repositório: 
+```bash
+git clone git@github.com:ondras/wwwsqldesigner.git
+```
+
+depois basta fazer `cd wwwsqldesigner` e rode o comando docker:
 
 ```bash
 docker build -t wwwsqldesigner .
@@ -33,6 +38,12 @@ docker run -d -p 8080:8080 wwwsqldesigner
 ```
 
 e abra o programa no [http://127.0.0.1:8080]( http://127.0.0.1:8080)
+
+volte para a pasta raiz do projeto com 
+
+```bash
+cd ..
+```
 
 Para verificar sua solução, clique em "Save / Load", depois em "Save XML", crie um arquivo localmente chamado `movies.xml` localmente e copie/cole o código XML gerado nele. Você pode então rodar `make` para verificar sua solução.
 
